@@ -20,7 +20,7 @@ const listingRouter = require("./routes/listings.js");
 const reviewRouter = require("./routes/reviews.js");
 const userRouter = require("./routes/user.js");
 
-const dbUrl ='mongodb+srv://Prachi_k:Prachi123@cluster0.lca7z.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+const dbUrl =process.env.ATLASDB_URL;
 
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB successfully'))
